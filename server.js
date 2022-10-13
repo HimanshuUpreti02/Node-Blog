@@ -10,7 +10,7 @@ const dbURI =
   'mongodb+srv://Himanshu_13:Sri141102@node-basics.cvzcmuk.mongodb.net/node-basics?retryWrites=true&w=majority'
 mongoose
   .connect(dbURI)
-  .then(result => app.listen(3000)) //listen to the request after conneted to the database
+  .then(result => app.listen(process.env.PORT || 3000)) //listen to the request after conneted to the database
   .catch(err => console.log(err))
 
 // register ejs as view engine
