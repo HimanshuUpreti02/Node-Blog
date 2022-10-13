@@ -21,7 +21,7 @@ app.set('view engine', 'ejs')
 app.use(express.static('public'))
 
 /*----------------------- MiddleWare ---------------------*/
-app.use(morgan('dev'))
+app.set('views' , __dirname + '/views');
 app.use(express.urlencoded({ extended: true })) //use to parse data of form to the route
 
 
